@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main {
+    height: 100%;
+    width: 100vw;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img_wrapper {
+    width: 75vw;
+    z-index: 1;
+
+    display: flex;
+    gap: 16px;
+}
+
+.img_wrapper div {
+    transition: all .25s ease;
+    border-radius: 12px;
+    position: relative;
+    height: 60vh;
+
+    flex: 1;
+}
+
+.img_wrapper div::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    opacity: 0.30;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.img_wrapper .div1 {
+    background-image: url("./poster1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_wrapper .div2 {
+    background-image: url("./poster2.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_wrapper .div3 {
+    background-image: url("./poster3.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_wrapper .div4 {
+    background-image: url("./poster4.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_wrapper .div5 {
+    background-image: url("./poster5.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_wrapper div:hover {
+    flex: 7;
+}
