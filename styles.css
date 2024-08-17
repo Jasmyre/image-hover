@@ -1,5 +1,10 @@
+:root {
+    --card-height: 650px;
+}
+
 * {
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -33,61 +38,96 @@ body {
     z-index: 1;
 
     display: flex;
-    gap: 16px;
+    gap: 8px;
 }
 
 .img_wrapper div {
-    transition: all .25s ease;
+    transition: all .25s .25s ease;
+    height: var(--card-height);
     border-radius: 12px;
     position: relative;
-    height: 60vh;
 
     flex: 1;
 }
 
 .img_wrapper div::before {
     content: "";
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, gray, black 25%);
     border-radius: 12px;
-    opacity: 0.30;
+    opacity: 0.5;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 3;
+}
+
+.img_wrapper div a {
+    height: var(--card-height);
+    width: 100%;
+    z-index: 9999;
+    opacity: 0;
+    padding: 24px;
+    transition: all .25s .3s ease;
+
+    text-decoration: none;
+    color: wheat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img_wrapper div a:hover {
+    opacity: 1;
+}
+
+.img_wrapper div a p {
+    max-width: 50%;
+    margin-top: 0;
+
+    @media only screen and (max-width:900px) {
+        max-width: 100%;
+        
+    }
 }
 
 .img_wrapper .div1 {
-    background-image: url("./poster1.jpeg");
+    background-image: url("./img/poster1.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .img_wrapper .div2 {
-    background-image: url("./poster2.jpeg");
+    background-image: url("./img/poster2.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .img_wrapper .div3 {
-    background-image: url("./poster3.jpeg");
+    background-image: url("./img/poster3.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .img_wrapper .div4 {
-    background-image: url("./poster4.jpeg");
+    background-image: url("./img/poster4.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .img_wrapper .div5 {
-    background-image: url("./poster5.jpeg");
+    background-image: url("./img/poster5.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
